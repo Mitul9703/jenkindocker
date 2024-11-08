@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        DOCKER_IMAGE = 'flaskwebapp'  // Docker image name
-                     // Docker tag (could be Git commit hash, version, etc.)
-    }
 
     stages {
 
@@ -11,10 +7,10 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image using Dockerfile
-                    bat 'docker build -t ${DOCKER_IMAGE} .'
+                    bat 'docker build -t flaskwebapp .'
 
                     // Run the Docker container in detached mode (in the background)
-                    bat 'docker run -d -p 8000:8000 ${DOCKER_IMAGE}'
+                    bat 'docker run -d -p 8000:8000 flaskwebapp'
                 }
             }
         }
