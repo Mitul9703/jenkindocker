@@ -4,12 +4,7 @@ pipeline {
         DOCKER_IMAGE = 'flaskwebapp'  // Docker image name
                      // Docker tag (could be Git commit hash, version, etc.)
     }
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Mitul9703/jenkindocker.git'  // Replace with your repository
-            }
-        }
+
         stage('Build and Run Docker Image') {
             steps {
                 script {
