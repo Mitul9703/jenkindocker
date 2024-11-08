@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'your-image-name'  // Docker image name
+        DOCKER_IMAGE = 'flaskwebapp'  // Docker image name
                      // Docker tag (could be Git commit hash, version, etc.)
     }
     stages {
