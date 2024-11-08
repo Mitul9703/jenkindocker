@@ -5,6 +5,8 @@ pipeline {
                      // Docker tag (could be Git commit hash, version, etc.)
     }
 
+    stages {
+
         stage('Build and Run Docker Image') {
             steps {
                 script {
